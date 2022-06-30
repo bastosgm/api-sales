@@ -5,7 +5,7 @@ import { ProductRepository } from '../typeorm/repositories/ProductsRepository';
 import IRequest from 'src/types/modules/products/services/ShowProductServiceInterface';
 
 class ShowProductService {
-  public async execute({ id }: IRequest): Promise<Product | undefined> {
+  public async execute({ id }: IRequest): Promise<Product> {
     const productsRepository = getCustomRepository(ProductRepository);
 
     const product = await productsRepository.findOne(id);
