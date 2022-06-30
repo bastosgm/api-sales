@@ -8,8 +8,6 @@ class ListProductService {
 
     const products = await productsRepository.find();
 
-    // await productsRepository.save(products);
-
     return products;
   }
 }

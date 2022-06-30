@@ -16,9 +16,6 @@ class ShowProductService {
     if (!product) {
       throw new AppError('Product not found.');
     }
-
-    // await productsRepository.save(products);
-
     return product;
   }
 }
