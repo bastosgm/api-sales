@@ -2,10 +2,7 @@ import AppError from '@shared/errors/AppError';
 import { getCustomRepository } from 'typeorm';
 import Product from '../typeorm/entities/Product';
 import { ProductRepository } from '../typeorm/repositories/ProductsRepository';
-
-interface IRequest {
-  id: string;
-}
+import IRequest from 'src/types/modules/products/services/ShowProductServiceInterface';
 
 class ShowProductService {
   public async execute({ id }: IRequest): Promise<Product | undefined> {
